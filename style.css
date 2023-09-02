@@ -20,3 +20,28 @@ section
     text-transform: uppercase;
     background: var(--clr);
 }
+header
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px, 50px, 0;
+}
+header nav
+{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+header nav a
+{
+    position: relative;
+    text-decoration: none;
+    padding: 12px 20px;
+    color: #fff;
+    font-weight: 600;
+}
