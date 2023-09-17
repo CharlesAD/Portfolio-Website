@@ -53,7 +53,12 @@
             determination to stand out.
         </p>
     </section>
-    <section id="projects" style="--clr: #17c0eb;">Projects</section>
+    <section id="projects" style="--clr: #17c0eb;">
+        Projects
+        <div class="rain-container">
+            <div class="cloud"></div>
+        </div>
+    </section>
     <section id="history" style="--clr: #fd79a8;">
         History
         <p>
@@ -85,5 +90,34 @@
             of development.
         </p>
     </section>
+    <script>
+        function randomText(){
+            let text = ('abcdefghijklmnopqrstuvwxyz');
+            letter = text[Math.floor(Math.random() * text.length)];
+            return letter;
+        }
+
+        function rain(){
+            let cloud = document.querySelector('.cloud');
+            let e = document.createElement('div');
+            let left = Math.floor(Math.random() * 320)
+            let size = Math.random() * .1;
+            let duration = Math.random() * 1;
+
+            e.classList.add('text');
+            cloud.appendChild(e);
+            e.innerText = randomText()
+            e.style.left = left + 'px';
+            e.style.fontSize = 0.5+size+'em';
+            e.style.animationDuration = 1+duration+'s';
+
+            setTimeout(function(){
+                cloud.removeChild(e)},2000)
+        }
+
+        setInterval(function(){
+            rain()
+        },20);
+    </script>
 </body>
 </html>
