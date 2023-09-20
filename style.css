@@ -23,11 +23,15 @@ section
 }
 section p
 {
-    display: flex;
+    column-count: 2;
+    column-gap: 35px;
     font-size: small;
+    text-align: justify;
     justify-content: center;
     align-items: center;
     max-width: 50%;
+    
+    
 }
 header
 {
@@ -120,3 +124,6 @@ header nav a
         transform: translateY(290px) scale(0);
     }
 }
+
+
+
