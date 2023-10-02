@@ -81,6 +81,55 @@
             My previous career not only defines me but also enriches my 
             approach to becoming a skilled and adaptable developer.
         </p>
+        <div class="timeline-wrapper">
+            <ul class="timeline">
+                <li data-date="Oct 1, 2023">
+                    <span class="title">Mother's Birthday</span>
+                    <div class="data">
+                        <h3>Day you've been waiting for</h3>
+                        <small>Oct 1, 2023</small>
+                        <p>blah blah blah blah blah blah blah blah blah blah blah blah 
+                           blah blah blah blah blah blah blah blah blah blah blah blah.</p>
+                    </div>
+                </li>
+                <li data-date="Oct 1, 2023">
+                    <span class="title">Mother's Birthday</span>
+                    <div class="data">
+                        <h3>Day you've been waiting for</h3>
+                        <small>Oct 1, 2023</small>
+                        <p>blah blah blah blah blah blah blah blah blah blah blah blah 
+                           blah blah blah blah blah blah blah blah blah blah blah blah.</p>
+                    </div>
+                </li>
+                <li data-date="Oct 1, 2023">
+                    <span class="title">Mother's Birthday</span>
+                    <div class="data">
+                        <h3>Day you've been waiting for</h3>
+                        <small>Oct 1, 2023</small>
+                        <p>blah blah blah blah blah blah blah blah blah blah blah blah 
+                           blah blah blah blah blah blah blah blah blah blah blah blah.</p>
+                    </div>
+                </li>
+                <li data-date="Oct 1, 2023">
+                    <span class="title">Mother's Birthday</span>
+                    <div class="data">
+                        <h3>Day you've been waiting for</h3>
+                        <small>Oct 1, 2023</small>
+                        <p>blah blah blah blah blah blah blah blah blah blah blah blah 
+                           blah blah blah blah blah blah blah blah blah blah blah blah.</p>
+                    </div>
+                </li>
+                <li data-date="Oct 1, 2023">
+                    <span class="title">Mother's Birthday</span>
+                    <div class="data">
+                        <h3>Day you've been waiting for</h3>
+                        <small>Oct 1, 2023</small>
+                        <p>blah blah blah blah blah blah blah blah blah blah blah blah 
+                           blah blah blah blah blah blah blah blah blah blah blah blah.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </section>
     <section id="education" style="--clr: #67ff71;">
         Education
@@ -147,6 +196,22 @@
         //     boxes[num].classList.toggle('animate')
         // }
         // setInterval(animateBx);
+
+        //Timeline Code
+        const timeline_wrapper =  document.querySelector('.timeline-wrapper'),
+        timelines =  document.querySelectorAll('.timeline li .data');
+
+        for(const time of timelines){
+            time.onclick = ()=> time.classList.toggle('show');
+        }
+
+        timeline_wrapper.addEventListener('mousemove', (event) => {
+            const timeline = document.querySelector('.timeline');
+            let scroll_width = event.pageX / timeline_wrapper.clientWidth * (timeline_wrapper.clientWidth - timeline.clientWidth);
+
+            timeline.style.left = scroll_width.toFixed(1) + 'px';
+            })
+        
     </script>
 </body>
 </html>
