@@ -396,3 +396,45 @@ footer {
     font-size: 1rem;
 }
 
+.icon-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    position: relative;
+    cursor: pointer;
+    width: 125px;
+    height: 125px;
+    margin: 15px; 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.05); /* Expanding effect */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Increased white glow effect */
+}
+
+.icon::before {
+    content: attr(alt);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0; 
+    transition: opacity 0.2s;
+}
+
+.icon:hover::before {
+    opacity: 1; 
+}
+
+.experience-paragraph {
+    margin-bottom: 80px; 
+}
+
