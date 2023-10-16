@@ -411,8 +411,8 @@ footer {
 }
 
 .icon:hover {
-    transform: scale(1.05); /* Expanding effect */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Increased white glow effect */
+    transform: scale(1.05); 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); 
 }
 
 .icon::before {
