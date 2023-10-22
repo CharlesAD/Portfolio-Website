@@ -330,7 +330,7 @@ footer {
     color: #fd79a8;
     border-radius: 50%;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 15px;
     
 
     display: flex;
@@ -340,6 +340,10 @@ footer {
     transition: .3s ease;
     
 }
+
+
+
+
 
 
 
@@ -362,6 +366,8 @@ footer {
     z-index: 100;
 }
 
+
+
 .data h3
 {
     text-transform: capitalize;
@@ -381,7 +387,9 @@ footer {
 
 .data.show p
 {
-    margin-left: 0;
+    
+    
+    font-size: 9px;
 }
 
 .data .close
